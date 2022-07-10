@@ -86,7 +86,9 @@ console.log(`Green products (old):`);
 for (let p of pf.filterByColor(products, Color.green))
   console.log(` * ${p.name} is green`);
 
-// better method
+// ↑↑↑ BEFORE
+// ↓↓↓ AFTER
+
 class BetterFilter {
   filter(items, spec) {
     return items.filter(x => spec.isSatisfied(x));
